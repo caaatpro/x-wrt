@@ -14,8 +14,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: configure
-      run: ./configure
+    - name: feeds update
+      run: ./scripts/feeds update -a
+      
+    - name: feeds install
+      run: ./scripts/feeds install -a
       
     - name: Install dependencies
       run: make
