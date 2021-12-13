@@ -14,6 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
+    - name: install dependencies
+      run: apt install binutils bzip2 flex gawk grep make perl rsync subversion unzip which subversion g++ zlib1g-dev build-essential git python time libncurses5-dev gawk gettext unzip file libssl-dev wget libelf-dev build-essential libncurses5-dev python unzip
+    
     - name: feeds update
       run: ./scripts/feeds update -a
       
