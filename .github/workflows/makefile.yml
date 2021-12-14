@@ -24,7 +24,7 @@ jobs:
       run: ./scripts/feeds install -a
       
     - name: Install dependencies
-      run: sudo make
+      run: make -j1 V=s
       
     - name: Run check
       run: make check
